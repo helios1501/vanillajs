@@ -1,0 +1,97 @@
+// iOS colors
+$ios-blue: #007aff;
+$ios-gray: #8e8e93;
+$ios-bg: #f2f2f7;
+$ios-red: #ff3b30;
+
+body {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: $ios-bg;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  background: white;
+  width: 320px;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+#number {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #1c1c1e;
+}
+
+.list-btn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+
+  li {
+    flex: 1;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    font-weight: 500;
+  }
+
+  // Minus button
+  [data-cmnjs-btn-minus] {
+    background: rgba($ios-red, 0.1);
+    color: $ios-red;
+
+    &:hover {
+      background: rgba($ios-red, 0.2);
+    }
+
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+
+  // Reset button
+  [data-cmnjs-btn-reset] {
+    background: rgba($ios-gray, 0.14);
+    color: #3a3a3c;
+
+    &:hover {
+      background: rgba($ios-gray, 0.23);
+    }
+
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+
+  // Plus button
+  [data-cmnjs-btn-plus] {
+    background: rgba($ios-blue, 0.15);
+    color: $ios-blue;
+
+    &:hover {
+      background: rgba($ios-blue, 0.25);
+    }
+
+    &:active {
+      transform: scale(0.94);
+    }
+  }
+}

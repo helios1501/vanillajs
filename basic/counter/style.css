@@ -1,0 +1,77 @@
+body {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f2f2f7;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  background: white;
+  width: 320px;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+#number {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #1c1c1e;
+}
+
+.list-btn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+.list-btn li {
+  flex: 1;
+}
+.list-btn button {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  font-weight: 500;
+}
+.list-btn [data-cmnjs-btn-minus] {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}
+.list-btn [data-cmnjs-btn-minus]:hover {
+  background: rgba(255, 59, 48, 0.2);
+}
+.list-btn [data-cmnjs-btn-minus]:active {
+  transform: scale(0.94);
+}
+.list-btn [data-cmnjs-btn-reset] {
+  background: rgba(142, 142, 147, 0.14);
+  color: #3a3a3c;
+}
+.list-btn [data-cmnjs-btn-reset]:hover {
+  background: rgba(142, 142, 147, 0.23);
+}
+.list-btn [data-cmnjs-btn-reset]:active {
+  transform: scale(0.94);
+}
+.list-btn [data-cmnjs-btn-plus] {
+  background: rgba(0, 122, 255, 0.15);
+  color: #007aff;
+}
+.list-btn [data-cmnjs-btn-plus]:hover {
+  background: rgba(0, 122, 255, 0.25);
+}
+.list-btn [data-cmnjs-btn-plus]:active {
+  transform: scale(0.94);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body {
+  font-family: "SF Pro Display", Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f2f2f7;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1c1c1e;
+}
+
+.wrap {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.wrap input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 17px;
+  background: white;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
+}
+.wrap input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.4);
+}
+.wrap button {
+  padding: 14px 20px;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.wrap button:active {
+  transform: scale(0.96);
+}
+
+.list-to-do {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+}
+.list-to-do li {
+  background: white;
+  border-radius: 16px;
+  padding: 14px 18px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+.list-to-do li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+.list-to-do li .wrap-to-do {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-to-do li .wrap-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.list-to-do li .wrap-text input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #8e8e93;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.list-to-do li .wrap-text input[type=checkbox]:checked {
+  border-color: #007aff;
+  background: #007aff;
+}
+.list-to-do li .wrap-text input[type=checkbox]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+}
+.list-to-do li .wrap-text .task {
+  font-size: 17px;
+  color: #1c1c1e;
+}
+.list-to-do li .wrap-text .task.done {
+  color: #8e8e93;
+  text-decoration: line-through;
+  transition: 0.2s;
+}
+.list-to-do li .wrap-btn-del button {
+  background: rgba(255, 59, 48, 0.12);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #ff3b30;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.list-to-do li .wrap-btn-del button:hover {
+  background: rgba(255, 59, 48, 0.2);
+}
+.list-to-do li .wrap-btn-del button:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=style.css.map */

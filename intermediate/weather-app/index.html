@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather app Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/common/reset.css">
+  <script src="common.js" defer></script>
+</head>
+
+<body>
+  <p class="loading" id="loading">Loading...</p>
+  <div class="weather-app">
+    <div class="card">
+      <h2 class="title">Weather App</h2>
+      <div class="search-box">
+        <input type="text" placeholder="Enter city name..." data-cmnjs-input />
+        <button data-cmnjs-btn-search>Search</button>
+      </div>
+
+      <div class="result">
+        <h3 id="cityName">—</h3>
+        <div id="temperature" class="temp">—</div>
+        <p id="desc" class="description">Search to display weather</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

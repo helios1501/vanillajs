@@ -1,3 +1,7 @@
+$arrow-size: 44px;
+$arrow-bg: rgba(0, 0, 0, 0.5);
+$arrow-bg-hover: rgba(0, 0, 0, 0.75);
+$arrow-color: #fff;
 .wrap-img {
   img {
     max-width: 100%;
@@ -6,6 +10,7 @@
 }
 .wrap {
   overflow: hidden;
+  position: relative;
 }
 
 [data-cmnjs-slider] {
@@ -38,6 +43,11 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
   > li {
     > * {
       display: block;
@@ -54,5 +64,56 @@
     * {
       background-color: #333333;
     }
+  }
+}
+
+.list-arrow {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: $arrow-size;
+  padding-inline: 40px;
+}
+.btn-prev,
+.btn-next {
+  width: $arrow-size;
+  height: $arrow-size;
+  border-radius: 50%;
+  background: $arrow-bg;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background: $arrow-bg-hover;
+    transform: scale(1.05);
+  }
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $arrow-color;
+    border-right: 2px solid $arrow-color;
+  }
+}
+
+.btn-prev {
+  &::before {
+    transform: rotate(-135deg); // ◀
+  }
+}
+
+.btn-next {
+  &::before {
+    transform: rotate(45deg); // ▶
   }
 }

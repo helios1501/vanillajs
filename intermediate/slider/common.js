@@ -6,8 +6,37 @@ let total = slides.length;
 let index = 0;
 let timer = null;
 let ul = document.createElement("ul")
+let ulArrow = document.createElement("ul")
 ul.classList.add("list-dot")
+ulArrow.classList.add("list-arrow")
 track.parentElement.appendChild(ul)
+track.parentElement.appendChild(ulArrow)
+const liNext = document.createElement("li")
+const btnNext = document.createElement("button")
+btnNext.classList.add("btn-next")
+btnNext.addEventListener(('click'), () => {
+  index = Math.min(index + 1, total - 1)
+  if (index === total - 1) {
+    index = 0
+  }
+  updateSlides()
+})
+liNext.appendChild(btnNext)
+
+const liPrev = document.createElement("li")
+const btnPrev = document.createElement("button")
+btnPrev.classList.add("btn-prev")
+btnPrev.addEventListener(('click'), () => {
+  index = Math.max(index - 1, 0)
+  if (index === 0) {
+    index = total - 1
+  }
+  updateSlides()
+})
+liPrev.appendChild(btnPrev)
+
+ulArrow.appendChild(liPrev)
+ulArrow.appendChild(liNext)
 function updateSlides() {
   const prev = (index - 1 + total) % total;
   const next = (index + 1) % total;
@@ -46,11 +75,8 @@ const change = (data) => {
   clearInterval(timer);
   startInterval();
 }
-function createDot() {
 
-}
 document.addEventListener("DOMContentLoaded", () => {
   updateSlides();
   startInterval();
-  createDot();
 });

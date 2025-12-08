@@ -5,6 +5,7 @@
 
 .wrap {
   overflow: hidden;
+  position: relative;
 }
 
 [data-cmnjs-slider] {
@@ -38,6 +39,11 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .list-dot > li > * {
   display: block;
@@ -51,4 +57,50 @@
 }
 .list-dot .is-active * {
   background-color: #333333;
+}
+
+.list-arrow {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: 44px;
+  padding-inline: 40px;
+}
+
+.btn-prev,
+.btn-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.btn-prev:hover,
+.btn-next:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}
+.btn-prev::before,
+.btn-next::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.btn-prev::before {
+  transform: rotate(-135deg);
+}
+
+.btn-next::before {
+  transform: rotate(45deg);
 }/*# sourceMappingURL=style.css.map */

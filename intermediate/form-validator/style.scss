@@ -1,0 +1,84 @@
+// ===== Variables =====
+$primary: #6366f1; // indigo
+$error: #ef4444;
+$text: #111827;
+$muted: #6b7280;
+$border: #e5e7eb;
+$bg: #f9fafb;
+$white: #fff;
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f9fafb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+.form {
+  background: $white;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.wrap-input {
+  position: relative;
+  margin-bottom: 22px;
+
+  label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: $muted;
+    pointer-events: none;
+    background: $white;
+    padding: 0 6px;
+    transition: 0.25s ease;
+  }
+
+  input {
+    width: calc(100% - 28px);
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1.5px solid $border;
+    font-size: 15px;
+    color: $text;
+    background: transparent;
+    transition: all 0.25s ease;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 4px rgba($primary, 0.15);
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      top: -8px;
+      font-size: 12px;
+      color: $primary;
+    }
+
+    &.error {
+      border-color: $error;
+      box-shadow: 0 0 0 4px rgba($error, 0.15);
+    }
+  }
+
+  .error-text {
+    margin-top: 6px;
+    font-size: 12px;
+    color: $error;
+    display: none;
+  }
+}
